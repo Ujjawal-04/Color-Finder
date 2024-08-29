@@ -18,9 +18,9 @@ justify-content: center;
 }
 
 .Square {
-  width: 400px;
-  height: 400px;
-  border: 2px solid black;
+min-width: 400px;
+min-height: 400px;
+border: 2px solid black;
 box-shadow: 2px 2px 5px black;
 border-radius: 0.25rem;
 display: grid;
@@ -31,7 +31,7 @@ place-content: center;
   text-align: center;
 }
 form {
-  width: 400px;
+  max-width:400px;
 }
 label {
   position: absolute;
@@ -46,3 +46,48 @@ input[type="text"] {
   border-radius: 0.25rem;
   outline: none;
 }
+@media (max-width: 599px) {
+  .Square {
+    min-width: 90vw; 
+    min-height: 90vw; 
+    max-width: 100%; 
+    max-height: 100%; 
+  }
+  
+  form {
+    max-width: 90%; 
+  }
+  
+  input[type="text"] {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .Square {
+    min-width: 70vw; 
+    min-height: 70vw; 
+  }
+  
+  form {
+    max-width: 80%; 
+  }
+  
+  input[type="text"] {
+    font-size: 0.875rem; 
+  }
+}
+@media (min-width: 900px) {
+  .Square {
+    min-width: 400px; 
+    min-height: 400px; 
+  }
+  
+  form {
+    max-width: 400px;
+  }
+  
+  input[type="text"] {
+    font-size: 1rem; 
+  }
+}
+
